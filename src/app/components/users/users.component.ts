@@ -23,7 +23,6 @@ export class UsersComponent implements OnInit {
       this.users = response.users;
       console.log('this.users: ', this.users);
     });
-
   }
 
 }

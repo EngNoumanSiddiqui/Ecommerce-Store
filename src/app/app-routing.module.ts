@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProductsComponent } from './components/products/products.component';
 import { UsersComponent } from './components/users/users.component';
 import { CartsComponent } from './components/carts/carts.component';
+import { UsersGridComponent } from './pages/users-grid/users-grid.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
     path: 'carts', component: CartsComponent,
+  },
+  {
+    path: 'users-grid', component: UsersGridComponent,
   },
 ];
 

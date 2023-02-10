@@ -20,21 +20,21 @@ import { RippleModule } from 'primeng/ripple';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
-import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ProductsComponent } from './components/products/products.component';
 import { CartsComponent } from './components/carts/carts.component';
 import { UsersComponent } from './components/users/users.component';
 import { GridComponent } from './components/grid/grid.component';
+import { UsersGridComponent } from './pages/users-grid/users-grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignUpComponent,
     ProductsComponent,
     CartsComponent,
     UsersComponent,
     GridComponent,
+    UsersGridComponent,
   ],
   imports: [
     BrowserModule,
