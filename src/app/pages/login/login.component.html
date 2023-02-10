@@ -1,0 +1,102 @@
+<p-card>
+  <form class="classLogin">
+    <div class="p-d-flex p-flex-wrap container w-100 my-5">
+      <span>
+        <div *ngFor="let formSection of form.formSections">
+          <p-header>
+            <i class="pi pi-user" style="font-size: 2rem"></i>
+            <span class="p-pl-4"><h2>{{ formSection.name }}</h2></span>
+          </p-header>
+          <div class="p-d-flex p-flex-wrap">
+            <div *ngFor="let formField of formSection.fields">
+              <div [ngSwitch]="formField.control">
+
+                <!-- Text Input -->
+                <span>
+                  <div
+                    class="p-d-flex p-flex-column"
+                    *ngSwitchCase="dynamicCase.INPUT"
+                    >
+                    <label>{{formField.label}}</label>
+                    <input
+                      type="text"
+                      pInputText
+                      [name]="formField.field"
+                      [(ngModel)]="formField.value"
+                      required="true"
+                  />
+                  </div>
+                </span>
+
+                <!-- Number Input -->
+                <span>
+                  <div
+                    class="p-d-flex p-flex-column"
+                    *ngSwitchCase="dynamicCase.NUMERIC"
+                    >
+                    <label>{{formField.label}}</label>
+                    <input
+                      type="number"
+                      pInputText
+                      [name]="formField.field"
+                      [(ngModel)]="formField.value"
+                      required="true"
+                  />
+                  </div>
+                </span>
+
+                <!-- Password Input -->
+                <span>
+                  <div
+                    class="p-d-flex p-flex-column"
+                    *ngSwitchCase="dynamicCase.PASSWORD"
+                    >
+                    <label>{{formField.label}}</label>
+                    <input
+                      type="password"
+                      pInputText
+                      [name]="formField.field"
+                      [(ngModel)]="formField.value"
+                      required="true"
+                  />
+                  </div>
+                </span>
+
+                <!-- Email Input -->
+                <span>
+                  <div
+                    class="p-d-flex p-flex-column"
+                    *ngSwitchCase="dynamicCase.EMAIL"
+                    >
+                    <label>{{formField.label}}</label>
+                    <input
+                      type="email"
+                      pInputText
+                      [name]="formField.field"
+                      [(ngModel)]="formField.value"
+                      required="true"
+                  />
+                  </div>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+          <!-- Login Button -->
+        <div
+          class="p-col-12 p-d-flex p-jc-end"
+        >
+          <!-- save button -->
+          <button
+            pButton
+            type="button"
+            label="Login"
+            class="p-button-success"
+            (click)="onFormLogin()"
+          ></button>
+        </div>
+    </div>
+  </form>
+</p-card>
