@@ -24,6 +24,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ProductsComponent } from './components/products/products.component';
 import { CartsComponent } from './components/carts/carts.component';
 import { UsersComponent } from './components/users/users.component';
+import { GridComponent } from './components/grid/grid.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { UsersComponent } from './components/users/users.component';
     ProductsComponent,
     CartsComponent,
     UsersComponent,
+    GridComponent,
   ],
   imports: [
     BrowserModule,

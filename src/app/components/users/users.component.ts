@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Users } from 'src/app/models/users.model';
+import { IUsers } from 'src/app/models/users.model';
 
 @Component({
   selector: 'app-users',
@@ -8,7 +8,7 @@ import { Users } from 'src/app/models/users.model';
 })
 export class UsersComponent implements OnInit {
   usersURL: string = 'https://dummyjson.com/users';
-  users: Users[] = [];
+  users: IUsers[] = [];
 
   constructor(
 

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/models/products.model';
-import { ProductsService } from 'src/app/services/products.service';
+import { IProduct } from 'src/app/models/products.model';
 
 @Component({
   selector: 'app-products',
@@ -9,7 +8,7 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class ProductsComponent implements OnInit {
   prductsURL: string = 'https://dummyjson.com/products';
-  products: Product[] = [];
+  products: IProduct[] = [];
 
   constructor(
 
