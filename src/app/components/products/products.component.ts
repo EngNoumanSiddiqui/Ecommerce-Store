@@ -24,7 +24,6 @@ export class ProductsComponent implements OnInit {
     .then(res => res.json())
     .then((response)=>{
       this.products = response.products;
-      console.log('this.products: ', this.products);
     });
   }
 

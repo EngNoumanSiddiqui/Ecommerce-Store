@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IGridColumn } from 'src/app/models/grid.model';
 
 @Component({
@@ -6,7 +6,7 @@ import { IGridColumn } from 'src/app/models/grid.model';
   templateUrl: './users-grid.component.html',
   styleUrls: ['./users-grid.component.css']
 })
-export class UsersGridComponent {
+export class UsersGridComponent implements OnInit {
 
   constructor() { }
 

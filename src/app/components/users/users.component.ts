@@ -22,7 +22,6 @@ export class UsersComponent implements OnInit {
   fetchUsers(){
     fetch(this.usersURL).then(res => res.json()).then((response)=>{
       this.users = response.users;
-      console.log('this.users: ', this.users);
     });
   }
 
