@@ -9,10 +9,10 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
+  url: string = 'https://dummyjson.com/auth/login';
+
   form: IDynamicForm;
   dynamicCase = EFormControl;
-
-  url: string = 'https://dummyjson.com/auth/login';
   username: any;
   password: any;
   email: any;

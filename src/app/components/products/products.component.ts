@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IProduct } from 'src/app/models/products.model';
 
 @Component({
@@ -11,7 +12,7 @@ export class ProductsComponent implements OnInit {
   products: IProduct[] = [];
 
   constructor(
-
+    public router: Router,
   ){}
 
   ngOnInit() {
@@ -25,6 +26,14 @@ export class ProductsComponent implements OnInit {
       this.products = response.products;
       console.log('this.products: ', this.products);
     });
+  }
+
+  onUsers(){
+    this.router.navigate(['/users']);
+  }
+
+  onCarts(){
+    this.router.navigate(['/carts']);
   }
 
 }

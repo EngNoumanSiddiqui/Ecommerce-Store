@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ICarts } from 'src/app/models/carts.model';
 
 @Component({
@@ -11,7 +12,7 @@ export class CartsComponent implements OnInit {
   carts: ICarts[] = [];
 
   constructor(
-
+    public router: Router,
   ) {}
 
   ngOnInit(){
@@ -20,12 +21,18 @@ export class CartsComponent implements OnInit {
 
   getCarts(){
     fetch(this.cartsURL).then(res => res.json()).then((response)=>{
-      console.log('response: ', response.carts);
       response.carts.forEach((cart)=>{
         this.carts = cart.products;
-        console.log(' this.carts: ',  this.carts);
       })
     });
+  }
+
+  onProducts(){
+    this.router.navigate(['/products']);
+  }
+
+  onUsers(){
+    this.router.navigate(['/users']);
   }
 
 }

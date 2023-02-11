@@ -1,3 +1,10 @@
+<header>
+  <nav>
+    <button type="button"  pButton label="Products Component" (click)="onProducts()"></button>
+    <button type="button"  pButton label="Carts Component" (click)="onCarts()"></button>
+  </nav>
+</header>
+
 <p-table [value]="users" [tableStyle]="{'min-width': '60rem'}">
   <ng-template pTemplate="header">
       <tr>
